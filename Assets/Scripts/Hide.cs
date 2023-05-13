@@ -10,7 +10,8 @@ public class Hide : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Disable one camera
+        Cam2D.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -19,13 +20,13 @@ public class Hide : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             Is2D = !Is2D; // flip it
-
+            
             // switch camera
             SwitchCamera();
         }
 
-        if(Is2D) { Debug.Log("2D"); }
-        else     { Debug.Log("3D"); }
+        if(Is2D) { Debug.Log("2D View Active"); }
+        else     { Debug.Log("3D View Active"); }
     }
 
     bool GetIs2D()
@@ -35,17 +36,8 @@ public class Hide : MonoBehaviour
 
     void SwitchCamera()
     {
-        if (!Is2D)
-        {
-            // 2D to 3D cam 
-            Cam3D.GetComponent<Camera>().enabled = true; // Enable 3D
-            Cam2D.GetComponent<Camera>().enabled = false; // Disable 2D
-        }
-        else
-        {
-            // 3D to 2D cam 
-            Cam2D.GetComponent<Camera>().enabled = true; // Enable 3D
-            Cam3D.GetComponent<Camera>().enabled = false; // Disable 2D
-        }
+        // Flip each camera's active state
+        Cam3D.gameObject.SetActive(!Cam3D.gameObject.activeSelf);
+        Cam2D.gameObject.SetActive(!Cam2D.gameObject.activeSelf);
     }
 }

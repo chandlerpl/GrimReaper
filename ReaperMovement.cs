@@ -123,8 +123,8 @@ followers = newFollowers.ToArray();
 
                 Debug.Log("Removed follower: " + removedFollower.name);
 
-                Destroy(removedFollower);
-                Destroy(bodyObject);
+                removedFollower.SetActive(false);  // Disable the follower object
+                    bodyObject.SetActive(false);  // Disable the body object
 
                 Debug.Log("Destroyed body object: " + bodyObject.name);
             }
@@ -136,8 +136,8 @@ followers = newFollowers.ToArray();
 
                 Debug.Log("Removed follower: " + removedFollower.name);
 
-                Destroy(removedFollower);
-                Destroy(bodyObject);
+                removedFollower.SetActive(false);  // Disable the follower object
+                    bodyObject.SetActive(false);  // Disable the body object
 
                 Debug.Log("Destroyed body object: " + bodyObject.name);
             }
@@ -149,8 +149,8 @@ followers = newFollowers.ToArray();
 
                 Debug.Log("Removed follower: " + removedFollower.name);
 
-                Destroy(removedFollower);
-                Destroy(bodyObject);
+                removedFollower.SetActive(false);  // Disable the follower object
+                    bodyObject.SetActive(false);  // Disable the body object
 
                 Debug.Log("Destroyed body object: " + bodyObject.name);
             }

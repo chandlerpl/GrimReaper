@@ -155,12 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a143fd3ce2e5844fe8c268f26994b21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followers: []
-  lerpDuration: 1000
-  delayPerFollower: 1
-  baseMinDistance: 2
-  maxSpeed: 5
-  lerpSpeed: 0.1
 --- !u!136 &84474153
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -496,7 +490,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 3835b6a0941204647a7bd0895fb9f70d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3851,7 +3845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888553721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.49, y: 3.94, z: 6.64}
+  m_LocalPosition: {x: -12.54, y: 3.94, z: 6.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

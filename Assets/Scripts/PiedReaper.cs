@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Linq;
+using UnityEngine.UI;
 
 public class PiedReaper : MonoBehaviour
 {
@@ -18,8 +19,23 @@ public class PiedReaper : MonoBehaviour
     private float[] delays;  // Delays for each follower
     private float[] minDistances;  // Minimum distances for each follower
 
+
+    public GameObject[] objectsArray; // Array of objects
+    public Text uiText; // Reference to the UI Text component
+	private HashSet<GameObject> disabledObjects; // Set of disabled objects
+
+
+    private void UpdateUI()
+    {
+        uiText.text = "Ghosts Saved: " + disabledObjects.Count;
+    }
+
     private void Start()
     {
+        disabledObjects = new HashSet<GameObject>();
+
+        UpdateUI();
+
         playerTransform = transform;  // Assign the player's transform
 
         // Initialize arrays
@@ -46,6 +62,19 @@ public class PiedReaper : MonoBehaviour
 
     private void Update()
     {
+
+        foreach (GameObject obj in objectsArray)
+        {
+            if (!obj.activeSelf && !disabledObjects.Contains(obj))
+            {
+                disabledObjects.Add(obj);
+            }
+        }
+
+        UpdateUI();
+
+
+
         for (int i = 0; i < followers.Length; i++)
         {
             float t = Mathf.Clamp01((Time.time - delays[i]) / lerpDuration);  // Calculate the interpolation parameter

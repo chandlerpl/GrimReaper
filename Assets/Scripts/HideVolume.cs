@@ -17,4 +17,9 @@ public class HideVolume : MonoBehaviour
         bCanHide = false;
         Debug.Log("Player CAN'T hide");
     }
+
+    public bool GetCanHide()
+    { 
+        return bCanHide;
+    }
 }

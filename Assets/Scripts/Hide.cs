@@ -21,10 +21,18 @@ public class Hide : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            is2D = !is2D; // flip it
-            
-            // switch camera
-            SwitchCamera();
+            // if can hide is true
+            if(canHideVolume.gameObject.GetComponent<HideVolume>().GetCanHide())
+            {
+                is2D = !is2D; // flip it
+                
+                // switch camera
+                SwitchCamera();
+            }
+            else
+            {
+                Debug.Log("No Hiding Space!");
+            }
         }
 
         // check for collisions

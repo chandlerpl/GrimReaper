@@ -30,7 +30,7 @@ public class Hide : MonoBehaviour
         // check for collisions
         // if (canHideVolume.GetComponent<BoxCollider>().OnCollisionEnter())
         // {}
-        Debug.Log("CanHideVolume : Collision");
+        // Debug.Log("CanHideVolume : Collision");
 
         if(is2D) { Debug.Log("2D View Active"); }
         else     { Debug.Log("3D View Active"); }

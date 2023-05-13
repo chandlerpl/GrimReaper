@@ -16,6 +16,8 @@ public class ReaperMovement : MonoBehaviour
     private float[] delays;  // Delays for each follower
     private float[] minDistances;  // Minimum distances for each follower
 
+    public float shimmyMod;
+
     private void Start()
     {
         playerTransform = transform;  // Assign the player's transform
@@ -44,11 +46,21 @@ public class ReaperMovement : MonoBehaviour
     
     private void Update()
     {
-        // Move the player based on input
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput) * maxSpeed * Time.deltaTime;
+        // determine movement
+        Vector3 movement;
+        if (!gameObject.GetComponent<Hide>().GetIs2D())
+        // 3D move
+        {
+            movement = GetMovement3D();
+        }
+        else
+        // 2D move
+        {
+            movement = GetMovement2D();
+        }
+        // implement movement
         playerTransform.position += movement;
+
 
         for (int i = 0; i < followers.Length; i++)
         {
@@ -76,4 +88,20 @@ public class ReaperMovement : MonoBehaviour
             followers[i].transform.position = Vector3.Lerp(followers[i].transform.position, targetPosition, t * lerpSpeed * speed);
         }
     }
+
+    // Move the player based on input - 3D
+    private Vector3 GetMovement3D()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        return new Vector3(horizontalInput, 0f, verticalInput) * maxSpeed * Time.deltaTime;
+    }
+
+    // Move the player based on input - 2D
+    private Vector3 GetMovement2D()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        return new Vector3(horizontalInput, 0f, 0f) * maxSpeed * Time.deltaTime * shimmyMod;
+    }
+
 }

@@ -130,14 +130,21 @@ public class PiedReaper : MonoBehaviour
 
     public void AddGhost(Ghost ghost) {
         if (!followers.Contains(ghost)) {
+            ghost.GetComponent<SpriteRenderer>().sprite = ghost.following;
+            gameObject.GetComponent<AudioSource>().Play();
             followers.Add(ghost);
-
+            ghost.GetComponent<AudioSource>().Stop(); //stops the audio from the bunny
+           // ghost.GetComponent<SpriteRenderer>().sprite = ghost.following;
+            
+            
+    
             Debug.Log("Added new follower: " + ghost.gameObject.name + " (Index: " + (followers.Count - 1) + ")");
         }
     }
 
     public void RemoveGhost(Ghost ghost) {
         followers.Remove(ghost);
+        ghost.GetComponent<SpriteRenderer>().sprite = ghost.notFollowing;
 
         ghost.ResetPosition();
     }

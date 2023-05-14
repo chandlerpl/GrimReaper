@@ -37,7 +37,7 @@ public class ReaperMovement : MonoBehaviour
             movement = GetMovement2D();
         }
 
-        body.AddForce(movement); 
+        body.velocity = movement;
         // implement movement
         //playerTransform.position += movement;
     }

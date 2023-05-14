@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class PlayerDetector : MonoBehaviour
@@ -9,8 +11,13 @@ public class PlayerDetector : MonoBehaviour
     private GameObject playerObject;
     [SerializeField]
     private Ghost[] ghostObjects;
+    [SerializeField]
+    private Vector2 rotationMinMax = new Vector2(1, 180);
+    [SerializeField]
+    private float rotationSpeed = 1.0f;
 
     private bool isHunting;
+    private bool back;
 
     // Start is called before the first frame update
     void Start()
@@ -30,27 +37,45 @@ public class PlayerDetector : MonoBehaviour
     void FixedUpdate()
     {
         if(isHunting) {
-            Vector3 dir = playerObject.transform.position - transform.position;
-            if(Physics.Raycast(transform.position, dir.normalized, out RaycastHit hitInfo, 200)) {
-                if(hitInfo.collider.gameObject == playerObject) {
-                    Debug.Log("Player detected"); // Do something
-                }
-            }
+            Vector3 targetDir = playerObject.transform.position - transform.position;
+            targetDir = targetDir.normalized;
 
-            foreach(Ghost ghost in ghostObjects) {
-                if(ghost != null) {
-                    Vector3 ghostDir = ghost.transform.position - transform.position;
-                    if (Physics.Raycast(transform.position, ghostDir.normalized, out RaycastHit hitInfo2, 200)) {
-                        if (hitInfo2.collider.gameObject == ghost) {
-                            Debug.Log("Ghost detected"); // Do something else
-                            ghost.ResetPosition();
+            float dot = Vector3.Dot(targetDir, transform.forward);
+            float angle = Mathf.Acos(dot) * Mathf.Rad2Deg;
+
+            if (angle < 20) {
+                if (Physics.Raycast(transform.position, targetDir, out RaycastHit hitInfo, 200)) {
+                    if (hitInfo.collider.gameObject == playerObject) {
+                        Debug.Log("Player detected"); // Do something
+                    }
+                }
+
+                foreach (Ghost ghost in ghostObjects) {
+                    if (ghost != null) {
+                        Vector3 ghostDir = ghost.transform.position - transform.position;
+                        if (Physics.Raycast(transform.position, ghostDir.normalized, out RaycastHit hitInfo2, 200)) {
+                            if (hitInfo2.collider.gameObject == ghost) {
+                                Debug.Log("Ghost detected"); // Do something else
+                                ghost.ResetPosition();
+                            }
                         }
                     }
-                } else {
-                    Debug.Log("Missing gameObject in array.");
+                    else {
+                        Debug.Log("Missing gameObject in array.");
+                    }
                 }
             }
         }
+
+        float y = transform.eulerAngles.y;
+        y += back ? -rotationSpeed : rotationSpeed;
+
+        if(y > rotationMinMax.y) {
+            back = true;
+        } else if(y < rotationMinMax.x) {
+            back = false;
+        }
+        transform.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, y, transform.rotation.eulerAngles.z);
     }
 
     public void ToggleHunting(bool toggle) {

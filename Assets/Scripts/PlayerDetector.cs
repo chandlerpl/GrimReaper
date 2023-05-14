@@ -44,7 +44,7 @@ public class PlayerDetector : MonoBehaviour
             float angle = Mathf.Acos(dot) * Mathf.Rad2Deg;
 
             if (angle < 20) {
-                if (Physics.Raycast(transform.position, targetDir, out RaycastHit hitInfo, 200)) {
+                if (Physics.Raycast(transform.position, targetDir, out RaycastHit hitInfo, 2000)) {
                     if (hitInfo.collider.gameObject == playerObject) {
                         Debug.Log("Player detected"); // Do something
                     }
@@ -53,8 +53,8 @@ public class PlayerDetector : MonoBehaviour
                 foreach (Ghost ghost in ghostObjects) {
                     if (ghost != null) {
                         Vector3 ghostDir = ghost.transform.position - transform.position;
-                        if (Physics.Raycast(transform.position, ghostDir.normalized, out RaycastHit hitInfo2, 200)) {
-                            if (hitInfo2.collider.gameObject == ghost) {
+                        if (Physics.Raycast(transform.position, ghostDir.normalized, out RaycastHit hitInfo2, 2000)) {
+                            if (hitInfo2.collider.gameObject == ghost.gameObject) {
                                 Debug.Log("Ghost detected"); // Do something else
                                 ghost.ResetPosition();
                             }

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 
+[RequireComponent(typeof(Rigidbody))]
 public class ReaperMovement : MonoBehaviour
 {
 
@@ -12,9 +14,12 @@ public class ReaperMovement : MonoBehaviour
     public float maxSpeed = 5f;  // Maximum speed of the player
     public float shimmyMod;
 
+    private Rigidbody body;
+
     private void Start()
     {
         playerTransform = transform;  // Assign the player's transform
+        body = GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -31,8 +36,10 @@ public class ReaperMovement : MonoBehaviour
         {
             movement = GetMovement2D();
         }
+
+        body.AddForce(movement); 
         // implement movement
-        playerTransform.position += movement;
+        //playerTransform.position += movement;
     }
 
     // Move the player based on input - 3D
@@ -40,7 +47,8 @@ public class ReaperMovement : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        return new Vector3(horizontalInput, 0f, verticalInput) * maxSpeed * Time.deltaTime;
+
+        return ((transform.forward * verticalInput) + (transform.right * horizontalInput)) * maxSpeed * Time.deltaTime;
     }
 
     // Move the player based on input - 2D

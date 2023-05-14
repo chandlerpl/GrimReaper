@@ -1598,7 +1598,7 @@ GameObject:
   - component: {fileID: 761596094}
   - component: {fileID: 761596093}
   m_Layer: 0
-  m_Name: RedGhost
+  m_Name: RedBody
   m_TagString: Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

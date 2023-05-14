@@ -67,15 +67,15 @@ public class PlayerDetector : MonoBehaviour
             }
         }
 
-        float y = transform.eulerAngles.y;
+        float y = transform.localEulerAngles.y;
         y += back ? -rotationSpeed : rotationSpeed;
-
+/*
         if(y > rotationMinMax.y) {
             back = true;
         } else if(y < rotationMinMax.x) {
             back = false;
-        }
-        transform.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, y, transform.rotation.eulerAngles.z);
+        }*/
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, y, transform.localEulerAngles.z);
     }
 
     public void ToggleHunting(bool toggle) {

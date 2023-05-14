@@ -136,8 +136,6 @@ public class PiedReaper : MonoBehaviour
             ghost.GetComponent<AudioSource>().Stop(); //stops the audio from the bunny
            // ghost.GetComponent<SpriteRenderer>().sprite = ghost.following;
             
-            
-    
             Debug.Log("Added new follower: " + ghost.gameObject.name + " (Index: " + (followers.Count - 1) + ")");
         }
     }

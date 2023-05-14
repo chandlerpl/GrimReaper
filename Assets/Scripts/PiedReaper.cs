@@ -89,7 +89,7 @@ public class PiedReaper : MonoBehaviour
 
             if (distance < minDistances[i])
             {
-                speed = 0f;
+                //speed = 0f;
                 targetPosition = followers[i].transform.position; // Set current position as the target
             }
             else

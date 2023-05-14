@@ -15,13 +15,13 @@ public class PiedReaper : MonoBehaviour
     public float lerpSpeed = 1f;  // Speed of the lerping movement
 
     public GameObject[] objectsArray; // Array of objects
-    public Text uiText; // Reference to the UI Text component
+    //public Text uiText; // Reference to the UI Text component
 	private HashSet<GameObject> disabledObjects; // Set of disabled objects
 
 
     private void UpdateUI()
     {
-        uiText.text = "Ghosts Saved: " + disabledObjects.Count;
+        //uiText.text = "Ghosts Saved: " + disabledObjects.Count;
     }
 
     private void Start()

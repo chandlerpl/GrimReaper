@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4787077658752382214
 Transform:
@@ -104,7 +104,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -234,6 +234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -307,6 +311,10 @@ PrefabInstance:
     - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
@@ -530,6 +538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -603,6 +615,10 @@ PrefabInstance:
     - target: {fileID: 1740865777188006, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_Post_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740865777188006, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4443457444351534, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
       propertyPath: m_RootOrder
@@ -678,6 +694,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -751,6 +771,10 @@ PrefabInstance:
     - target: {fileID: 1740865777188006, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_Post_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740865777188006, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4443457444351534, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
       propertyPath: m_RootOrder
@@ -826,6 +850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Grass_01
       objectReference: {fileID: 0}
+    - target: {fileID: 152710, guid: b7c837c7a353568418f5f30dcd560a94, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 454624, guid: b7c837c7a353568418f5f30dcd560a94, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -899,6 +927,10 @@ PrefabInstance:
     - target: {fileID: 188674, guid: 35589ed62073c3e4b9721da43073baee, type: 3}
       propertyPath: m_Name
       value: SM_Env_Grass_Mound_Large_02 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 188674, guid: 35589ed62073c3e4b9721da43073baee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 430950, guid: 35589ed62073c3e4b9721da43073baee, type: 3}
       propertyPath: m_RootOrder
@@ -974,6 +1006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Grass_Mound_Large_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 188674, guid: 35589ed62073c3e4b9721da43073baee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 430950, guid: 35589ed62073c3e4b9721da43073baee, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -1048,6 +1084,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1121,6 +1161,10 @@ PrefabInstance:
     - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
@@ -1269,6 +1313,10 @@ PrefabInstance:
     - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
@@ -1492,6 +1540,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -1566,6 +1618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -1639,6 +1695,10 @@ PrefabInstance:
     - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
@@ -1788,6 +1848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Dead_02
       objectReference: {fileID: 0}
+    - target: {fileID: 165174, guid: 0b1b652ae3bdca44bb5e4be7ad65009f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 420080, guid: 0b1b652ae3bdca44bb5e4be7ad65009f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1861,6 +1925,10 @@ PrefabInstance:
     - target: {fileID: 1740865777188006, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_Post_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740865777188006, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4443457444351534, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
       propertyPath: m_RootOrder
@@ -2232,6 +2300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_Post_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1740865777188006, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4443457444351534, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -2305,6 +2377,10 @@ PrefabInstance:
     - target: {fileID: 188674, guid: 35589ed62073c3e4b9721da43073baee, type: 3}
       propertyPath: m_Name
       value: SM_Env_Grass_Mound_Large_02 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 188674, guid: 35589ed62073c3e4b9721da43073baee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 430950, guid: 35589ed62073c3e4b9721da43073baee, type: 3}
       propertyPath: m_RootOrder
@@ -2380,6 +2456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Dead_03
       objectReference: {fileID: 0}
+    - target: {fileID: 177224, guid: 9e5f6cdd25a316442982ee2a3c5dc122, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 436668, guid: 9e5f6cdd25a316442982ee2a3c5dc122, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2453,6 +2533,10 @@ PrefabInstance:
     - target: {fileID: 1740865777188006, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_Post_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740865777188006, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4443457444351534, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
       propertyPath: m_RootOrder
@@ -2528,6 +2612,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_Post_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1740865777188006, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4443457444351534, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2602,6 +2690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -2675,6 +2767,10 @@ PrefabInstance:
     - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
@@ -2898,6 +2994,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_Post_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1740865777188006, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4443457444351534, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2971,6 +3071,10 @@ PrefabInstance:
     - target: {fileID: 188674, guid: 35589ed62073c3e4b9721da43073baee, type: 3}
       propertyPath: m_Name
       value: SM_Env_Grass_Mound_Large_02 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 188674, guid: 35589ed62073c3e4b9721da43073baee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 430950, guid: 35589ed62073c3e4b9721da43073baee, type: 3}
       propertyPath: m_RootOrder
@@ -3046,6 +3150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -3119,6 +3227,10 @@ PrefabInstance:
     - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
@@ -3194,6 +3306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -3267,6 +3383,10 @@ PrefabInstance:
     - target: {fileID: 1740865777188006, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_Post_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740865777188006, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4443457444351534, guid: b329f5084f75dca4482f572ec5096d81, type: 3}
       propertyPath: m_RootOrder
@@ -3342,6 +3462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Grass_Mound_Large_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 188674, guid: 35589ed62073c3e4b9721da43073baee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 430950, guid: 35589ed62073c3e4b9721da43073baee, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -3415,6 +3539,10 @@ PrefabInstance:
     - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
@@ -3564,6 +3692,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -3638,6 +3770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -3711,6 +3847,10 @@ PrefabInstance:
     - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder
@@ -3859,6 +3999,10 @@ PrefabInstance:
     - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Ornate_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416488864645328, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4761718621510278, guid: 795185ed98263a340bbd5cbe9de0d531, type: 3}
       propertyPath: m_RootOrder

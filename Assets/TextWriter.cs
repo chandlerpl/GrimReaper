@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TextWriter : MonoBehaviour
 {
@@ -36,9 +37,11 @@ public class TextWriter : MonoBehaviour
 
             if(pos >= textWriter.Length) {
                 this.enabled = false;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
-        } else {
-            currSpeed = (int)(5.0 / Time.deltaTime);
+            else {
+                currSpeed = (int)(5.0 / Time.deltaTime);
+            }
         }
     }
 }

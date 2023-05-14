@@ -1,9 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using TreeEditor;
+using Unity.VisualScripting.FullSerializer;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDetector : MonoBehaviour
 {
@@ -13,19 +16,25 @@ public class PlayerDetector : MonoBehaviour
     private Vector2 rotationMinMax = new Vector2(1, 180);
     [SerializeField]
     private float rotationSpeed = 1.0f;
+    [SerializeField]
+    private TextMeshProUGUI healthText;
 
     private bool isHunting;
     private bool back;
+    private int health = 3;
 
     // Start is called before the first frame update
     void Start()
     {
-        isHunting = true;
+        isHunting = false;
 
         if(playerObject == null) {
             Debug.LogError("The playerObject is null but is required for hunting to begin.");
         }
+        healthText.text = health + "";
     }
+
+    private float time;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -41,6 +50,14 @@ public class PlayerDetector : MonoBehaviour
                 if (Physics.Raycast(transform.position, targetDir, out RaycastHit hitInfo, 2000)) {
                     if (hitInfo.collider.gameObject == playerObject.gameObject) {
                         Debug.Log("Player detected"); // Do something
+                        if(Time.time > time) {
+                            if(--health <= 0) {
+                                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                            } else {
+                                time = Time.time + 5;
+                                healthText.text = health + "";
+                            }
+                        }
                     }
                 }
 

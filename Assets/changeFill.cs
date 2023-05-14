@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class changeFill : MonoBehaviour
 {
@@ -20,15 +21,15 @@ public class changeFill : MonoBehaviour
     {
         if (_piedReaper.BlueGhostReturned)
         {
-            counter[0].GetComponent<SpriteRenderer>().sprite = fill;
+            counter[0].GetComponent<Image>().sprite = fill;
         }
         if (_piedReaper.RedGhostReturned)
         {
-            counter[1].GetComponent<SpriteRenderer>().sprite = fill;
+            counter[1].GetComponent<Image>().sprite = fill;
         }
         if (_piedReaper.GreenGhostReturned)
         {
-            counter[2].GetComponent<SpriteRenderer>().sprite = fill;
+            counter[2].GetComponent<Image>().sprite = fill;
         }
         
     }

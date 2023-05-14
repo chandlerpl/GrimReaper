@@ -18,6 +18,16 @@ public class PiedReaper : MonoBehaviour
     //public Text uiText; // Reference to the UI Text component
 	private HashSet<GameObject> disabledObjects; // Set of disabled objects
 
+    public bool RedGhostReturned;
+    public bool BlueGhostReturned;
+    public bool GreenGhostReturned;
+
+    private void Awake()
+    {
+        RedGhostReturned = false;
+        BlueGhostReturned = false;
+        GreenGhostReturned = false;
+    }
 
     private void UpdateUI()
     {
@@ -87,8 +97,10 @@ public class PiedReaper : MonoBehaviour
 
                 if (bodyObject.name == "RedBody" && followers.Count > 0 && followers[0].name == "RedGhost")
                 {
+                    RedGhostReturned = true;
                     GameObject removedFollower = followers[0].gameObject;
                     followers.RemoveAt(0);
+                    
 
                     Debug.Log("Removed follower: " + removedFollower.name);
 
@@ -100,6 +112,7 @@ public class PiedReaper : MonoBehaviour
 
                 if (bodyObject.name == "BlueBody" && followers.Count > 0 && followers[0].name == "BlueGhost")
                 {
+                    BlueGhostReturned = true;
                     GameObject removedFollower = followers[0].gameObject;
                     followers.RemoveAt(0);
 
@@ -113,6 +126,7 @@ public class PiedReaper : MonoBehaviour
 
                 if (bodyObject.name == "GreenBody" && followers.Count > 0 && followers[0].name == "GreenGhost")
                 {
+                    GreenGhostReturned = true;
                     GameObject removedFollower = followers[0].gameObject;
                     followers.RemoveAt(0);
 

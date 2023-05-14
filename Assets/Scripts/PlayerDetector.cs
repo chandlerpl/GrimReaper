@@ -8,9 +8,7 @@ using UnityEngine;
 public class PlayerDetector : MonoBehaviour
 {
     [SerializeField]
-    private GameObject playerObject;
-    [SerializeField]
-    private Ghost[] ghostObjects;
+    private PiedReaper playerObject;
     [SerializeField]
     private Vector2 rotationMinMax = new Vector2(1, 180);
     [SerializeField]
@@ -27,10 +25,6 @@ public class PlayerDetector : MonoBehaviour
         if(playerObject == null) {
             Debug.LogError("The playerObject is null but is required for hunting to begin.");
         }
-
-        if(ghostObjects == null || ghostObjects.Length == 0) {
-            Debug.Log("There are no ghost objects listed to be checked.");
-        }
     }
 
     // Update is called once per frame
@@ -45,18 +39,21 @@ public class PlayerDetector : MonoBehaviour
 
             if (angle < 20) {
                 if (Physics.Raycast(transform.position, targetDir, out RaycastHit hitInfo, 2000)) {
-                    if (hitInfo.collider.gameObject == playerObject) {
+                    if (hitInfo.collider.gameObject == playerObject.gameObject) {
                         Debug.Log("Player detected"); // Do something
                     }
                 }
 
-                foreach (Ghost ghost in ghostObjects) {
+                for(int i = 0; i < playerObject.followers.Count; i++) {
+                    Ghost ghost = playerObject.followers[i];
+
                     if (ghost != null) {
                         Vector3 ghostDir = ghost.transform.position - transform.position;
                         if (Physics.Raycast(transform.position, ghostDir.normalized, out RaycastHit hitInfo2, 2000)) {
                             if (hitInfo2.collider.gameObject == ghost.gameObject) {
                                 Debug.Log("Ghost detected"); // Do something else
-                                ghost.ResetPosition();
+                                GameManager.Instance.reaper.RemoveGhost(ghost);
+                                --i;
                             }
                         }
                     }

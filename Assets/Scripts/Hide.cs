@@ -25,8 +25,13 @@ public class Hide : MonoBehaviour
             SwitchCamera();
         }
 
-        if(is2D) { Debug.Log("2D View Active"); }
-        else     { Debug.Log("3D View Active"); }
+        if(is2D) {
+            GameManager.Instance.playerDetector.ToggleHunting(false);
+            Debug.Log("2D View Active");
+        } else {
+            GameManager.Instance.playerDetector.ToggleHunting(true);
+            Debug.Log("3D View Active");
+        }
     }
 
     void SwitchCamera()

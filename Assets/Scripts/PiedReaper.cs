@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class PiedReaper : MonoBehaviour
 {
-    public List<GameObject> followers;  // Array of follower objects
+    public List<Ghost> followers;  // Array of follower objects
     public float lerpDuration = 1f;  // Duration of the lerping animation
     public float delayPerFollower = 1f;  // Delay per follower in the array
     public float baseMinDistance = 2.0f;  // Base minimum distance for the first follower
@@ -76,12 +76,8 @@ public class PiedReaper : MonoBehaviour
             if (collider.CompareTag("Ghost"))
             {
                 GameObject ghostObject = collider.gameObject;
-                if (!followers.Contains(ghostObject))
-                {
-                    followers.Add(ghostObject);
-
-                    Debug.Log("Added new follower: " + ghostObject.name + " (Index: " + (followers.Count - 1) + ")");
-                }
+                Ghost ghost = ghostObject.GetComponent<Ghost>();
+                AddGhost(ghost);
             }
 
 
@@ -91,7 +87,7 @@ public class PiedReaper : MonoBehaviour
 
                 if (bodyObject.name == "RedBody" && followers.Count > 0 && followers[0].name == "RedGhost")
                 {
-                    GameObject removedFollower = followers[0];
+                    GameObject removedFollower = followers[0].gameObject;
                     followers.RemoveAt(0);
 
                     Debug.Log("Removed follower: " + removedFollower.name);
@@ -104,7 +100,7 @@ public class PiedReaper : MonoBehaviour
 
                 if (bodyObject.name == "BlueBody" && followers.Count > 0 && followers[0].name == "BlueGhost")
                 {
-                    GameObject removedFollower = followers[0];
+                    GameObject removedFollower = followers[0].gameObject;
                     followers.RemoveAt(0);
 
                     Debug.Log("Removed follower: " + removedFollower.name);
@@ -117,7 +113,7 @@ public class PiedReaper : MonoBehaviour
 
                 if (bodyObject.name == "GreenBody" && followers.Count > 0 && followers[0].name == "GreenGhost")
                 {
-                    GameObject removedFollower = followers[0];
+                    GameObject removedFollower = followers[0].gameObject;
                     followers.RemoveAt(0);
 
                     Debug.Log("Removed follower: " + removedFollower.name);
@@ -129,5 +125,20 @@ public class PiedReaper : MonoBehaviour
                 }
             }
         }
+    }
+
+
+    public void AddGhost(Ghost ghost) {
+        if (!followers.Contains(ghost)) {
+            followers.Add(ghost);
+
+            Debug.Log("Added new follower: " + ghost.gameObject.name + " (Index: " + (followers.Count - 1) + ")");
+        }
+    }
+
+    public void RemoveGhost(Ghost ghost) {
+        followers.Remove(ghost);
+
+        ghost.ResetPosition();
     }
 }

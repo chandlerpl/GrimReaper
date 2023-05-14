@@ -415,17 +415,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &175971225 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6693331414275700389, guid: 8fd6c92bd2ccd614f8d7699b61c22348, type: 3}
-  m_PrefabInstance: {fileID: 1886407475}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &176563024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3272,7 +3261,6 @@ MonoBehaviour:
   maxSpeed: 5
   lerpSpeed: 1
   objectsArray: []
-  uiText: {fileID: 175971225}
 --- !u!135 &1220478101
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5270,7 +5258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3409586156168426069, guid: 8fd6c92bd2ccd614f8d7699b61c22348, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3409586156168426089, guid: 8fd6c92bd2ccd614f8d7699b61c22348, type: 3}
       propertyPath: m_Pivot.x
